@@ -63,6 +63,8 @@
             this.trestbps = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -266,11 +268,11 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(179, 278);
+            this.button1.Location = new System.Drawing.Point(333, 276);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 43);
             this.button1.TabIndex = 20;
-            this.button1.Text = "ตรวจ";
+            this.button1.Text = "บันทึก";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -320,7 +322,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 43);
             this.button2.TabIndex = 24;
-            this.button2.Text = "Import";
+            this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -390,11 +392,38 @@
             this.thal.HeaderText = "thal";
             this.thal.Name = "thal";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(143)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(179, 276);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 43);
+            this.button3.TabIndex = 26;
+            this.button3.Text = "ตรวจ";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("FC Ekaluck", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(143)))));
+            this.label14.Location = new System.Drawing.Point(20, 226);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 23);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "120 ปกติ";
+            // 
             // formDiagnostic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -466,5 +495,7 @@
         private DataGridViewTextBoxColumn trestbps;
         private DataGridViewTextBoxColumn exang;
         private DataGridViewTextBoxColumn thal;
+        private Button button3;
+        private Label label14;
     }
 }

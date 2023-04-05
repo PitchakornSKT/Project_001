@@ -56,11 +56,7 @@ namespace Project1
             textBox8.Text = "";
             textBox9.Text = "";
 
-            if (textBox8.Text == 1)
-            {
-                MessageBox.Show("คุณเป็นโรคหัวใจ");
-            }
-            else;
+
             }
 
 
@@ -72,20 +68,8 @@ namespace Project1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "CSV (*.csv) | *.csv";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string[] readAllLine = File.ReadAllLines(openFileDialog.FileName);
-
-                string readAllText = File.ReadAllText(openFileDialog.FileName);
-                for (int i = 0; i < readAllLine.Length; i++)
-                {
-                    string allDATARAW = readAllLine[i];
-                    string[] allDATASplited = allDATARAW.Split(',');
-                    this.dataGridView1.Rows.Add(allDATASplited[0], allDATASplited[1], allDATASplited[2], allDATASplited[3], allDATASplited[4], allDATASplited[5], allDATASplited[6], allDATASplited[7], allDATASplited[8]);
-                }
-            }
+            int rowIndax = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows.RemoveAt(rowIndax);
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -139,6 +123,15 @@ namespace Project1
         {
             
         }
-      
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (textBox8.Text == "0")
+            {
+                MessageBox.Show("ไม่เป็นโรคหัวใจ");
+            }
+            else
+                MessageBox.Show("ตรวจพบว่าเป็นโรคหัวใจ");
+        }
     }
 }

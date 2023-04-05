@@ -54,9 +54,11 @@
             this.button2.TabIndex = 27;
             this.button2.Text = "Import";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -69,11 +71,11 @@
             this.trestbps,
             this.exang,
             this.thal});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 63);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(795, 318);
-            this.dataGridView1.TabIndex = 26;
+            this.dataGridView1.Size = new System.Drawing.Size(801, 318);
+            this.dataGridView1.TabIndex = 28;
             // 
             // name
             // 
@@ -125,8 +127,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button2);
             this.Name = "formInformation";
             this.Size = new System.Drawing.Size(801, 384);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
