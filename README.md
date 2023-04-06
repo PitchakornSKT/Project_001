@@ -14,6 +14,7 @@ classDiagram
     Program <|-- formHome
     formHome <|-- formDiagnostic
     formHome <|-- formInformation
+    formHome <|-- Home
 
     Program : +Main()
 
@@ -33,6 +34,11 @@ classDiagram
     class formInformation{
         +button2_Click
     }
+    
+    class Home{
+        +label1
+    }
+    
 
 ```
 ชื่อผู้พัฒนาโปรแกรม
